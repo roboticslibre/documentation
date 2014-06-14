@@ -1,0 +1,76 @@
+%*****************************************************************************************
+%*********************************** Third Chapter **************************************
+%*****************************************************************************************
+\chapter{Timeline}
+    
+ \vspace{1mm}
+ \footnotesize {
+ \begin{flushright}
+ \textit{Lo imposible solo tarda un poco m\'as.
+%Imagine a world that you would like to see in   10/100/1000  years
+ }
+%% \cite{auam}.
+ \end{flushright}
+ }
+\vspace{5mm} 
+
+Different tasks have been planned as follow:
+\begin{itemize}[noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt]
+\item T1: Development of the Low-cost Robot
+\item T2: Implement new blocks and tools to Ardublock 
+\item T3: Development of the speech recognition tool with pocketsphinx, racket and firmata.
+\item T4: Integration of T1, T2 and T3.
+\item T5: At the first workshop of Libre Robotics adecuate surveys, methods or plans will 
+	  be implemented in order to evaluate mentors and participants. In this part, it 
+	  is also going to be designed the activities for the workshop with the aim of 
+	  learning and sharing knowledge to build conditions for a better world.
+\item T6: Week of the workshop. Evaluation of the first stage and plans for the second stage of the project.
+\end{itemize}
+
+Timeline is shown in the gantt chart (Figure \ref{fig:ganttchart}).
+Document releases, low-cost robot designs, open-source software tutorials and 
+web-page modifications are going to be under constant improvement and 
+it is highly probably that new ideas are going to be generated during this process.
+
+% REFERENCE FOR THE GANTT CHART COMMANDS IN LATEX
+% http://www.martin-kumm.de/wiki/doku.php?id=Projects:A_LaTeX_package_for_gantt_plots
+
+\begin{figure}[htbp!] 
+\begin{center}
+  \begin{gantt}{8}{16} %{rows}{columns}
+    \begin{ganttitle}
+      \numtitle{2014}{1}{2014}{9}
+      \numtitle{2015}{1}{2015}{7}
+    \end{ganttitle}
+    
+    \begin{ganttitle}
+    \titleelement{April}{1}
+    \titleelement{May}{1}
+    \titleelement{Jun}{1}
+    \titleelement{Jul}{1}
+    \titleelement{Aug}{1}
+    \titleelement{Sep}{1}
+    \titleelement{Oct}{1}
+    \titleelement{Nov}{1}
+    \titleelement{Dec}{1}
+    \titleelement{Jan}{1}
+    \titleelement{Feb}{1}
+    \titleelement{Mar}{1}
+    \titleelement{Apr}{1}
+    \titleelement{May}{1}
+    \titleelement{Jun}{1}
+    \titleelement{Jul}{1}
+    \end{ganttitle}
+    
+  \ganttbar[color=green]{T1}{0}{9}
+  \ganttbar[color=green]{T2}{0}{9}
+  \ganttbar[color=green]{T3}{2}{7}
+  \ganttbar{T4}{8}{2}
+  \ganttbar{T5}{9}{6}
+  \ganttbar[pattern=crosshatch,color=blue]{T6}{15}{1}
+  \end{gantt}
+  \caption[PA]{Gantt Chart for {\librER} project}
+\label{fig:ganttchart}
+  \end{center}
+\end{figure}
+  

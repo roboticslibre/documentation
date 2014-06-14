@@ -1,0 +1,105 @@
+\documentclass[letterpaper,times,numbered,print,custommargin]{Classes/PhDThesisPSnPDF}
+% ******************************************************************************
+% ******************************* Class Options ********************************
+% *********************** See README for more details **************************
+% ***   https://github.com/kks32/phd-thesis-template/blob/master/README.md   ***
+% ******************************************************************************
+
+
+% ********************************** Preamble **********************************
+% Preamble: Contains packages and user-defined commands and settings
+\input{Preamble/preamble}
+\graphicspath{{Figs/}{Figs/}}
+
+
+% ******************************************************************************
+% ************************ Thesis Information & Meta-data **********************
+%% The title of the thesis
+% 
+\title{
+LibrE Robotics: \\
+\vspace{5mm}
+\Large{Educational Robotics for\\
+	Learning and Sharing Knowledge \\
+	to Build Conditions for a Better World}\\
+}
+
+%% The full name of the author
+% \author{generally speaking a mammal who}
+% \author{WANT TO CHANGE THE WORLD FOR BETTER LIVING CONDITIONS}
+
+ \crest{\includegraphics[scale=1.3]{Preamble/LibrERobotics_logo.png}}
+
+
+%% You can redefine the submission text:
+% Default as per the University guidelines: This dissertation is submitted for
+% the degree of Doctor of Philosophy
+\renewcommand{\submissiontext}{
+% PhD Research Proposal
+}
+
+%% Submission date
+\degreedate{
+14th of June 2014 \\ 
+Document Release 001 \\ 
+\url{https://sites.google.com/site/librerobotics/}
+} 
+
+%% Meta information
+\subject{LaTeX} 
+\keywords{{LaTeX} } 
+
+
+% ***************************** Abstract Separate ****************************** 
+% To printout only the titlepage and the abstract with the PhD title and the 
+% author name for submission to the Student Registry, use the abstract option in
+% the document class. 
+\ifdefineAbstract
+ \includeonly{Abstract/abstract} 
+\else
+\fi
+
+
+% ******************************** Front Matter ********************************
+\begin{document}
+\frontmatter
+\begin{titlepage}
+\maketitle
+\end{titlepage}
+\include{Abstract/abstract}
+
+% *********************** Adding TOC and List of Figures ***********************
+\tableofcontents
+
+% \printnomenclature[space] space can be set as 2.5cm between symbol and
+% description
+% \printnomencl
+
+% ******************************** Main Matter *********************************
+\mainmatter
+
+\include{Chapter1/chapter1} % Introduction
+\include{Chapter2/chapter2} % Software and Hardware Requirements
+\include{Chapter3/chapter3} % Timeline 
+\include{Chapter4/chapter4} % Feeling like voluntering
+\include{Chapter5/chapter5} % Future Work
+
+% ********************************** Bibliography ******************************
+\backmatter 
+
+\begin{spacing}{0.5}
+\bibliographystyle{plainnat}
+\cleardoublepage
+\bibliography{References/references} 
+\end{spacing}
+
+% ********************************** Appendices ********************************
+
+\begin{appendices} % Using appendices environment for more functunality
+% \include{Appendix1/appendix1}
+\end{appendices}
+
+% *************************************** Index ********************************
+\printthesisindex %If index is present
+\end{document}
+
